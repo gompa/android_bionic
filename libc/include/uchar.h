@@ -33,9 +33,10 @@
 #include <wchar.h>
 
 __BEGIN_DECLS
-
+#if __STDC_VERSION__ >= 201112L && !defined(__cplusplus)
 #define __STD_UTF_16__ 1
 #define __STD_UTF_32__ 1
+#endif
 
 size_t c16rtomb(char* __restrict, char16_t, mbstate_t* __restrict);
 size_t c32rtomb(char* __restrict, char32_t, mbstate_t* __restrict);
