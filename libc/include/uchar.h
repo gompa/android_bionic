@@ -39,6 +39,9 @@ typedef __CHAR16_TYPE__ char16_t;
 typedef __CHAR32_TYPE__ char32_t;
 #endif
 
+#define __STD_UTF_16__ 1
+#define __STD_UTF_32__ 1
+
 
 size_t c16rtomb(char* __restrict, char16_t, mbstate_t* __restrict);
 size_t c32rtomb(char* __restrict, char32_t, mbstate_t* __restrict);
